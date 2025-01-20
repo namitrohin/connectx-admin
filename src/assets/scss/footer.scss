@@ -1,0 +1,17 @@
+footer {
+    background-color: $dark400;
+    color: #fff;
+    font-size: 0.8em;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    a {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    footer a:hover {
+        color: $primary300;
+    }
+}

@@ -1,0 +1,125 @@
+header {
+  &.topheader {
+    background: $dark400;
+    padding: 10px 0;
+    box-shadow: 0 2px 18px rgb(0 0 0 / 10%);
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+    .bar {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 3px;
+      margin-left: 10px;
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+
+    .bar:hover {
+      color: $primary400;
+    }
+
+    .rightColumn {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      float: right;
+      width: 80%;
+    }
+
+    .dropdown {
+      padding: 0 8px;
+    }
+
+    .selectoption {
+      max-width: max-content;
+      width: 100%;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      border-radius: 4px;
+      background-color: #e6e6e6;
+      border: solid 1px #c5c5c5;
+      font-size: 0.8em;
+    }
+
+    .pagename {
+      font-size: 1.2em;
+      font-weight: 700;
+      color: $dark500;
+      span {
+        color: $primary300;
+        font-size: 50px;
+        line-height: 0;
+      }
+    }
+  }
+  .headerRightProfile {
+    display: flex;
+    align-items: center;
+    .profilePicUpload {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      overflow: hidden;
+      img.user_profile {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      input[type=file]{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: red;
+        opacity: 0;
+      }
+    }
+    button{
+      padding: 0;
+      border: solid 1px transparent;
+      &:focus,&:active{
+        outline: none;
+        border: solid 1px transparent;
+      }
+    }
+  }
+
+  .datetime_wrapper {
+    border: solid 1px $primary300;
+    border-radius: 5px;
+    min-width: 128px;
+    .datelabel {
+      background-color: $primary400;
+      color: #fff;
+      font-size: 10px;
+      text-align: center;
+      font-weight: 600;
+      padding: 0 5px;
+    }
+    .bottom {
+      padding: 4px 3px 0;
+    }
+    .circle_box {
+      line-height: 1;
+    }
+    &.weeklabel {
+      min-width: max-content;
+      .week {
+        width: 30px;
+        height: 30px;
+        background-color: $primary400;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 4px auto;
+      }
+    }
+  }
+}

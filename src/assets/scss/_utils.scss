@@ -1,0 +1,162 @@
+$primary300: #d05356;
+$primary400: #b02828;
+$primary500: #981919;
+$gray300: #f2f2f2;
+$gray400: #eaeaea;
+$gray500: #c7c7c7;
+$success300: #58b159;
+$success400: #50a151;
+$success500: #478d48;
+$dark300: #ddd;
+$dark400: #333;
+$dark500: #000;
+$marginWidth: 220px;
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+label{
+  z-index: 0 !important;
+}
+
+%inputStyle {
+  padding: 5px 10px;
+  border: solid 1px rgba(0, 0, 0, 0.23);
+  border-color: rgba(0, 0, 0, 0.23);
+  width: 100%;
+  border-radius: 4px;
+}
+
+@mixin max-width($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin min-width($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin min-max-width($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+%sameTitleColor {
+  color: $dark400;
+}
+
+.bg-pink{
+  background-color: #ffe9e9 !important;
+}
+
+.object-contain {
+  object-fit: contain;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+body {
+  font-size: 1rem;
+  background-color: $gray300;
+}
+
+h1 {
+  @extend %sameTitleColor;
+}
+
+h3 {
+  @extend %sameTitleColor;
+}
+
+a {
+  text-decoration: none;
+
+  &.backlink {
+    color: $dark400;
+  }
+}
+
+.form-control {
+  &:focus {
+    box-shadow: none;
+    border: solid 1px $primary300;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.canclebutton.btn {
+  &:active {
+    color: $gray500;
+    border: solid 1px transparent;
+  }
+}
+
+.savebutton.btn {
+  background-color: $primary300;
+  color: #fff;
+  &:hover {
+    background-color: $primary400;
+    color: #fff;
+  }
+  &:active {
+    background-color: $primary500;
+    border: solid 1px $primary500;
+
+    color: #fff;
+  }
+}
+
+.malebox{
+  .card-body {
+    background-color: #c3edff;
+    .card-title{
+      margin: 0;
+      svg{
+        font-size: 30px;
+        color: #0072a2;
+      }
+    }
+  }
+  
+  .card-header {
+    color: #fff;
+    background-color: #01A6EA;
+  }
+} 
+.femalebox{
+  .card-body {
+    background-color: #ffeef4;
+    .card-title{
+      margin: 0;
+      svg{
+        font-size: 30px;
+        color: #7b4658;
+      }
+    }
+  }
+  
+  .card-header {
+    color: #7b4658;
+    background-color: #FFB1CB;
+  }
+}

@@ -1,0 +1,548 @@
+.bg-red {
+  background-color: $primary500;
+}
+
+.menuwrapper {
+  .active {
+    background-color: $primary300;
+
+    svg,
+    span {
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: $primary500;
+    }
+  }
+}
+
+.mainwrapper {
+  margin-left: $marginWidth;
+  height: 100vh;
+  position: relative;
+
+  .wrapper {
+    padding: 15px;
+    height: calc(100vh - 90px);
+    padding: 1em;
+    overflow-y: auto;
+    position: relative;
+
+    button.addFormButton {
+      background-color: $primary300;
+      color: #fff;
+      position: absolute;
+      top: 1.4em;
+      right: 1em;
+      transition: 0.3s ease;
+      font-size: 14px;
+      padding: 5px 15px;
+    }
+  }
+
+  .commonBtn {
+    background-color: $primary300;
+    border: none;
+    color: #fff;
+    font-size: 0.9em;
+    padding: 7px 26px;
+
+    &:active {
+      background-color: $primary500;
+    }
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+  }
+
+  &.hide {
+    margin-left: 0;
+  }
+}
+
+.gridsearchbar {
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+  }
+
+  input {
+    padding-left: 38px;
+    @extend %inputStyle;
+    border-color: transparent;
+  }
+}
+
+.paginationwrapper {
+  align-items: center;
+  background-color: transparent;
+  bottom: 0;
+  color: $dark400;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 12px 0;
+  position: relative;
+  right: 0;
+  width: 100%;
+  z-index: 4;
+  margin-top: 8px;
+  font-size: 0.9em;
+
+  select,
+  input {
+    @extend %inputStyle;
+  }
+}
+
+.successmessagebox {
+  position: fixed;
+  right: -50%;
+  bottom: 55px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.31);
+  transition: 0.5s ease-out;
+  opacity: 0;
+  visibility: hidden;
+  min-width: 200px;
+  font-size: 12px;
+
+  .box {
+    h6 {
+      text-transform: uppercase;
+      color: #fff;
+      letter-spacing: 1px;
+      font-weight: 700;
+      font-size: clamp(0.8em, 16px, 1.1em);
+      margin: 0;
+    }
+
+    p {
+      font-size: clamp(0.8em, 14px, 1em);
+    }
+
+    * {
+      margin: 0;
+      line-height: 1;
+    }
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    right: 15px;
+
+    .icon {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      /* background-color: #fff; */
+      color: #fff;
+      font-size: clamp(0.6em, 28px, 1em);
+    }
+  }
+}
+
+.dateselect {
+  width: 100%;
+
+  span {
+    display: block;
+    margin: 0 0 3px;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .react-datepicker-wrapper {
+    width: 100%;
+  }
+
+  input {
+    @extend %inputStyle;
+  }
+}
+
+.formwrapper {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 7px;
+}
+
+.tabletopheader {
+  width: 100%;
+
+  input,
+  .MuiFormLabel-root {
+    font-size: 13px;
+  }
+
+  .MuiInputBase-sizeSmall {
+    padding: 2px !important;
+  }
+
+  .MuiInputBase-formControl {
+    background-color: $gray300;
+  }
+}
+
+.Mui-TableHeadCell-Content-Labels {
+  width: 100%;
+
+  >.Mui-TableHeadCell-Content-Wrapper.MuiBox-root {
+    width: 100%;
+  }
+}
+
+.datagridtablewrapper {
+  &>div>div:last-child {
+    min-height: 1em;
+    box-shadow: none;
+  }
+}
+
+.exportbutton {
+  margin-bottom: -36px;
+  position: relative;
+  z-index: 23;
+  width: max-content;
+  padding: 0 0 0 10px;
+
+  button {
+    font-size: 12px;
+    padding: 3px;
+
+    img {
+      height: 16px;
+    }
+  }
+}
+
+.qrcode_border {
+  border: solid 1px #6e6e6e;
+  width: 614px;
+  height: 874px;
+  margin: 20px auto;
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  img {
+    object-fit: contain;
+
+    &.logo {
+      width: 120px;
+      height: 70px;
+
+      &.connect {
+        height: 65px;
+        width: 200px;
+      }
+    }
+
+    &.remotex {
+      height: 65px;
+      width: 200px;
+    }
+
+    &.image {
+      width: 300px;
+      height: 300px;
+      object-fit: contain;
+      margin: 30px 0 20px;
+    }
+  }
+}
+
+.accountPage {
+  img.profile {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  span.label {
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+}
+
+@media print {
+  @page {
+    counter-increment: page 1;
+    margin: 0.5cm;
+    size: A8 portrait;
+
+    @bottom-left {
+      content: counter(page) " / " counter(pages);
+      display: none;
+    }
+  }
+
+  .printBtn {
+    display: none;
+  }
+}
+
+.inner_pages {
+  header {
+    border-bottom: solid 1px $gray500;
+    padding: 15px 0;
+
+    .logo {
+      height: 40px;
+      width: auto;
+    }
+
+    a {
+      color: $dark500;
+    }
+  }
+
+  h1 {
+    font-size: 30px;
+    color: $dark500;
+  }
+
+  p {
+    a {
+      color: $primary300;
+    }
+  }
+}
+
+.soscontent {
+  height: 600px;
+  overflow-y: auto;
+
+  .carousel,
+  .carousel-inner {
+    height: 100%;
+  }
+
+  a[role="button"] {
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.carousel-control-prev {
+      left: -70px;
+    }
+
+    &.carousel-control-next {
+      right: -70px;
+    }
+  }
+
+  .carousel-caption {
+    text-align: left;
+    right: 0;
+    left: 0;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.notifybox {
+  position: relative;
+
+  span {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $primary500;
+    color: #fff;
+    font-size: 11px;
+    left: -8px;
+    top: -9px;
+    line-height: 18px;
+  }
+}
+
+.notificationbox {
+  background-color: $gray300;
+
+  &.notred {
+    background-color: #e9f2e7;
+  }
+
+  button {
+    border: none;
+    padding: 0 10px;
+  }
+}
+
+.checkpointprint {
+  min-height: 100vh;
+}
+
+.grivsahyogbox {
+  vertical-align: middle;
+
+  td.title {
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+
+    img {
+      height: 50px;
+      width: 50px;
+      margin: 0 0 6px;
+      object-fit: container;
+    }
+
+    span {
+      display: block;
+      line-height: 1;
+    }
+  }
+
+  &.griv {
+
+    td,
+    tr,
+    th {
+      background-color: #ffe2c3;
+      border-color: #9d6323;
+    }
+
+    th {
+      background-color: #da8c36;
+      color: #fff;
+    }
+  }
+
+  &.syg {
+
+    td,
+    tr,
+    th {
+      background-color: #ffdadb;
+      border-color: #97383b;
+    }
+
+    th {
+      background-color: $primary300;
+      color: #fff;
+    }
+  }
+}
+
+.homeguard {
+  .customerbox {
+    position: relative;
+  }
+
+  .sostable {
+    border-color: #e6b1b1;
+  }
+
+  .guard_graph {
+    width: 340px;
+    height: 350px;
+    position: absolute;
+    left: -20px;
+
+    .ag-charts-tooltip-value {
+      font-size: 14px;
+    }
+  }
+
+  .group_image {
+    position: relative;
+    z-index: 3;
+  }
+
+  .malebox,
+  .femalebox {
+    .card-header {
+      font-size: 12px;
+      padding: 3px 9px;
+    }
+
+    .card-body {
+      padding: 5px 10px;
+    }
+
+    .card-title {
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+
+      svg {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.custom-daterange-picker {
+  position: relative;
+
+  .custom-date-input {
+    position: static;
+    box-shadow: none;
+    border: none;
+    overflow: visible;
+  }
+
+  // div:last-child {
+  //   position: absolute;
+  //   top: 100%;
+  //   right: 0;
+  //   background-color: #fff;
+  //   overflow: hidden;
+  // }
+}
+
+.picker {
+  position: relative;
+  bottom: -18px;
+  margin-bottom: -40px;
+  .custom-daterange-picker:last-child{
+    position: absolute;
+    right: 0;
+    z-index: 5;
+    .rdrDateDisplayWrapper {
+      background-color: #fff;
+    }
+  }
+  .dateheader{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border: solid 1px #d8d8d8;
+    border-radius: 5px;
+    line-height: 1;
+  }
+}
