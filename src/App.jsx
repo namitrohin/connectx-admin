@@ -45,8 +45,8 @@ import Sahyog from './pages/Settings/Sahyog';
 import { useState } from 'react';
 import GuardIncident from './pages/Incident/GuardIncident';
 import MyAccount from './pages/MyAccount';
-import { getToken } from 'firebase/messaging';
-import { messing } from './components/FirebaseNotification';
+// import { getToken } from 'firebase/messaging';
+// import { messing } from './components/FirebaseNotification';
 import Notifications from './pages/Notifications';
 import Attendance from './pages/Guard/Attendance';
 import QRConnect from './pages/Guard/QRConnect';
@@ -312,36 +312,36 @@ const routes = createBrowserRouter([
   },
 ]);
 function App() {
-  const requestPermission = async () => {
-    const notify = await Notification.requestPermission();
-    console.log(notify);
-    if (notify === 'granted') {
-      // const messaging = getMessaging();
-      getToken(messing, {
-        vapidKey:
-          'BO2W0MjN1wI9CgU31ueBCp_d9-vTeywOQF8R0oWYWdl-8sIsHwVph45W9_o1gpMV6QIqYPDqzG3N5R1rxnXJUa4',
-      })
-        .then((currentToken) => {
-          if (currentToken) {
-            // Send the token to your server and update the UI if necessary
-            console.log('current token', currentToken);
-            // ...
-          } else {
-            // Show permission request UI
-            console.log(
-              'No registration token available. Request permission to generate one.'
-            );
-            // ...
-          }
-        })
-        .catch((err) => {
-          console.log('An error occurred while retrieving token. ', err);
-          // ...
-        });
-    } else {
-      console.log(notify === 'granted');
-    }
-  };
+  // const requestPermission = async () => {
+  //   const notify = await Notification.requestPermission();
+  //   console.log(notify);
+  //   if (notify === 'granted') {
+  //     // const messaging = getMessaging();
+  //     getToken(messing, {
+  //       vapidKey:
+  //         'BO2W0MjN1wI9CgU31ueBCp_d9-vTeywOQF8R0oWYWdl-8sIsHwVph45W9_o1gpMV6QIqYPDqzG3N5R1rxnXJUa4',
+  //     })
+  //       .then((currentToken) => {
+  //         if (currentToken) {
+  //           // Send the token to your server and update the UI if necessary
+  //           console.log('current token', currentToken);
+  //           // ...
+  //         } else {
+  //           // Show permission request UI
+  //           console.log(
+  //             'No registration token available. Request permission to generate one.'
+  //           );
+  //           // ...
+  //         }
+  //       })
+  //       .catch((err) => {
+  //         console.log('An error occurred while retrieving token. ', err);
+  //         // ...
+  //       });
+  //   } else {
+  //     console.log(notify === 'granted');
+  //   }
+  // };
   // console.log(Notification.requestPermission());
   const [triggerSOS, setTriggerSOS] = useState(true);
 
