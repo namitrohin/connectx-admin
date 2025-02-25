@@ -143,7 +143,7 @@ export default function Header({ hideSideBar, pageName, type }) {
               to="/notifications"
             >
               {notificationCount > 0 && <span>{notificationCount}</span>}
-              <FaBell /> Notifcations
+              <FaBell /> Notifcations Count
             </Link>
 
             <HeaderDateTime />
